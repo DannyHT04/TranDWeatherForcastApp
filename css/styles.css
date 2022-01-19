@@ -1,0 +1,26 @@
+.mainbg{
+    background-image: url(../images/mainpage.png);
+}
+
+.blueBox{
+    background-color: #66B6DB;
+    opacity: 100%;
+    padding: 0px;
+    width: auto;
+    border-radius: 25px;
+}
+
+.borderleft{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.borderright{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    padding-bottom: 3px;
+}
