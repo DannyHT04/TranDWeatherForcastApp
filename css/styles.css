@@ -1,15 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=PT+Sans&family=Source+Sans+Pro&display=swap');
+
+.sanCity{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.san{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.fs{
+    font-size: 50px;
+    font-weight: 600;
+}
+.fsMain{
+    font-size: 80px;
+}
+.fstxt{
+    font-size: 50px;
+}
 .mainbg{
     background-image: url(../images/mainpage.png);
 }
 
-.blueBox{
+.noM{
+    margin-top: -30px;
+}
+.lightblueBox{
+    background-color: #84C4E2;
+    opacity: 100%;
+    padding: 0px;
+    width: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.lightblueBox2{
+    background-color: #84C4E2;
+    opacity: 100%;
+    padding: 0px;
+    width: auto;
+   border-radius: 25px;
+}
+
+.darkbluebox{
     background-color: #66B6DB;
     opacity: 100%;
     padding: 0px;
     width: auto;
-    border-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
-
 .borderleft{
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -22,5 +62,65 @@
     border-right: none;
     border-top: none;
     border-bottom: none;
-    padding-bottom: 3px;
+    padding-bottom: 8px;
+}
+.noBorder{
+    border: none;
+    background: none;
+}
+.searchSize{
+    width: 65%;
+}
+
+.white{
+    color: white;
+}
+
+.bgNone{
+    background: transparent;
+}
+
+.imgSunny{
+    content:url(../images/Icon\ ionic-md-sunny.png);
+    width: 40%;
+}
+
+.imgCloudy{
+    content: url(../images/Icon\ ionic-md-cloudy.png);
+    width: 40%;
+}
+
+.imgRain{
+   content:url(../images/Icon\ ionic-ios-rainy.png);
+   width: 40%;
+}
+.imgSnow{
+ content: url(../images/Icon\ ionic-md-snow.png);
+ width: 40%;
+}
+.imgPartlySunny{
+    content: url(../images/Icon\ ionic-md-partly-sunny.png);
+    width: 40%;
+}
+
+.imgSunny2{
+    content:url(../images/Icon\ ionic-md-sunny.png);
+    height: 70%;
+}
+.imgCloudy2{
+    content: url(../images/Icon\ ionic-md-cloudy.png);
+    height: 70%;
+}
+.imgRain2{
+   content:url(../images/Icon\ ionic-ios-rainy.png);
+   height: 70%;
+}
+.imgSnow2{
+ content: url(../images/Icon\ ionic-md-snow.png);
+ height: 70%;
+}
+.imgPartlySunny2{
+    content: url(../images/Icon\ ionic-md-partly-sunny.png);
+    height: 70%;
+
 }
