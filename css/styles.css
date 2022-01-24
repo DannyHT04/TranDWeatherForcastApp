@@ -22,12 +22,22 @@
 .mainbg{
     background-image: url(../images/mainpage.png);
 }
-
+.mainNight{
+    background-image: url(../images/nightMain.png);
+}
 .noM{
     margin-top: -30px;
 }
 .lightblueBox{
     background-color: #84C4E2;
+    opacity: 100%;
+    padding: 0px;
+    width: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.blackBox{
+    background-color: black;
     opacity: 100%;
     padding: 0px;
     width: auto;
@@ -41,9 +51,24 @@
     width: auto;
    border-radius: 25px;
 }
+.blackBox2{
+    background-color: grey;
+    opacity: 100%;
+    padding: 0px;
+    width: auto;
+   border-radius: 25px;
+}
 
 .darkbluebox{
     background-color: #66B6DB;
+    opacity: 100%;
+    padding: 0px;
+    width: auto;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.blackBox3{
+    background-color: black;
     opacity: 100%;
     padding: 0px;
     width: auto;
