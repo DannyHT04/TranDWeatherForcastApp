@@ -1,27 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://kit.fontawesome.com/ccfd3ad15d.js" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <title>Weather App</title>
+</head>
 
+<body id="background" class="mainbg">
+    <!-- start of container fluid -->
+    <div class="container-fluid">
+        <!-- start of container -->
+        <div class="container mt-4">
+            <!-- start of light blue box -->
+            <div id="searchbg" class="lightblueBox">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <div class="input-group">
+                            <input class=" border search-color borderleft searchSize"  placeholder="Search city" id="userInput">
+                            <span class="input-group-append">
+                                <button class="borderright" id="searchBtn" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex justify-content-end">
+                        <button type="button" id="favoriteList" class="noBorder">
+                            <i class="white fas fa-th-list fa-2x"></i>
+                        </button>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+            <!-- end of light blue box -->
+            <!-- start of dark blue box -->
+            <div id="searchbg2" class="darkbluebox">
+                <div class="row">
+                    <div class="col-2 d-flex justify-content-end">
+                        <i class="fas fa-map-marker-alt fa-3x white pt-3"></i>
+                    </div>
+                    <div class="col-4 d-flex justify-content-start">
+                        <p id="locationName" class="sanCity white "> Stockton</p>
+                        <button type="button" id="favoriteIcon" class="noBorder">
+                            <i id="favoriteIconsymbol" class="fas fa-plus-circle white fa-3x"></i>
+                        </button>
+                    </div>
+                    <div class="col-1">
+                        <!-- <button type="button" id="favoriteList" class="noBorder">
+                            <i class="fas fa-plus-circle white fa-3x pt-4"></i>
+                        </button> -->
+                    </div>
+                    <div class="col-5">
+                        <p id="time" class="sanCity white">Date / Time</p>
+                    </div>
+                </div>
+                <!-- start of a container -->
+                <div class="container">
+                    <div id="card0" class ="lightblueBox2">
+                        <div class="card-group ">
+                            <div id="card1" class="card bgNone lightblueBox2 noBorder">
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-9 d-flex justify-content-center">
+                                        <p class="fs white">Today</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-9 d-flex justify-content-center">
+                                        <p id="todayTemp" class="card-text white fsMain ">65°</p>
+                                      </div>
+                                  </div>
+                               
+                        
+                              </div>
+                            </div>
+                            <div class="card bgNone noBorder ">
+                              <div class="card-body">
+                               
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-center mt-4">
+                                        <p id="mainIcon" class="imgSunny"></p>
+                                    </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div id="card2" class="card bgNone lightblueBox2 noBorder">
+                              <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-11 justify-content-end d-flex">
+                                        <p id="maxMainTemp" class="white fs"> 75° </p>
+                                    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11 d-flex justify-content-end noM">
+                                        <p class="white">High</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11 justify-content-end d-flex">
+                                        <p id="minMainTemp" class="white fs"> 60° </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11 d-flex justify-content-end noM">
+                                        <p class="white">Low</p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- end of cards -->
+                    
+                    <!-- start of container in container -->
+                    <div class="container ">
+                        <!-- start of 1 day -->
+                        <div id="card3" class="row lightblueBox2 mt-2">
+                            <div class="col-3 d-flex justify-content-center">
+                                <p id="firstDay" class="fstxt white">Tuesday</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center pt-3">
+                                <p id="icon1" class="imgCloudy2"></p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <p id="wind1" class="white fstxt">4</p>
+                                
+                                 <i class="fas fa-wind white fa-3x pt-3 ps-3"></i>
+                                
+                               
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                                <p id="max1" class="white fstxt pe-4">70°</p>
+                                <p id="min1"class="white fstxt ps-4">60°</p>
+                            </div>
+                            
+                        </div>
+                        <!-- end of 1 day -->
+                        <!-- start of 2 day -->
+                        <div id="card4" class="row lightblueBox2 mt-2">
+                            <div class="col-3 d-flex justify-content-center">
+                                <p id="secondDay" class="fstxt white">Wednesday</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center pt-3">
+                                <p id="icon2" class="imgCloudy2"></p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <p id="wind2" class="white fstxt">4</p>
+                                
+                                 <i class="fas fa-wind white fa-3x pt-3 ps-3"></i>
+                                
+                               
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                                <p id="max2" class="white fstxt pe-4">70°</p>
+                                <p id="min2"class="white fstxt ps-4">60°</p>
+                            </div>
+                        </div>
+                        <!-- end of 2 day -->
+                        <!-- start of 3 day -->
+                        <div id="card5" class="row lightblueBox2 mt-2">
+                            <div class="col-3 d-flex justify-content-center">
+                                <p id="thirdDay" class="fstxt white">Thursday</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center pt-3">
+                                <p id="icon3" class="imgCloudy2"></p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <p id="wind3" class="white fstxt">4</p>
+                                
+                                 <i class="fas fa-wind white fa-3x pt-3 ps-3"></i>
+                                
+                               
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                                <p id="max3" class="white fstxt pe-4">70°</p>
+                                <p id="min3"class="white fstxt ps-4">60°</p>
+                            </div>
+                        </div>
+                        <!-- end of 3 day -->
+                        <!-- start of 4 day -->
+                        <div id="card6" class="row lightblueBox2 mt-2">
+                            <div class="col-3 d-flex justify-content-center">
+                                <p id="fourthDay" class="fstxt white">Friday</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center pt-3">
+                                <p id="icon4" class="imgCloudy2"></p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <p id="wind4" class="white fstxt">4</p>
+                                
+                                 <i class="fas fa-wind white fa-3x pt-3 ps-3"></i>
+                                
+                               
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                                <p id="max4" class="white fstxt pe-4">70°</p>
+                                <p id="min4"class="white fstxt ps-4">60°</p>
+                            </div>
+                        </div>
+                        <!-- end of 4 day -->
+                        <!-- start of 5 day -->
+                        <div id="card7" class="row lightblueBox2 mt-2">
+                            <div class="col-3 d-flex justify-content-center">
+                                <p id="fifthDay" class="fstxt white">Saturday</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center pt-3">
+                                <p id="icon5" class="imgCloudy2"></p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <p id="wind5" class="white fstxt">4</p>
+                                
+                                 <i class="fas fa-wind white fa-3x pt-3 ps-3"></i>
+                                
+                               
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                                <p id="max5" class="white fstxt pe-4">70°</p>
+                                <p id="min5"class="white fstxt ps-4">60°</p>
+                            </div>
+                        </div>
+                        <!-- end of 5 day -->
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12"></div>
+                    </div>
+                    <!-- end of container in container -->
+                    <!-- end of container -->
+                </div>
+            </div>
+            <!-- end of dark blue box -->
+        </div>
+    </div>
+    <!-- end of container fluid -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./scripts/app.js" type="module" ></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
